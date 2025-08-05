@@ -14,12 +14,12 @@ git clone <this-repo.git>
 ```
 npm i
 ```
-2. Compile everything.
+3. Compile everything.
 ```
 npm run build
 ```
-3. Move `main.js` and `manifest.json` to `.obsidian/plugins/obsidian-eazipeasy/`.
-4. Activate the plugin in Obsidian settings.
+4. Move `main.js` and `manifest.json` to `.obsidian/plugins/obsidian-eazipeasy/`.
+5. Activate the plugin in Obsidian settings.
 ## Usage
 - Use the `export as zip` command to export the current note as a ZIP archive.
 - Use the `import from zip` command to import a ZIP archive into your vault.
