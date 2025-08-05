@@ -1,6 +1,6 @@
 {
 	"name": "eazipeasy",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"description": "Share your notes as zip - easy peasy export and import",
 	"main": "build/main.js",
 	"scripts": {

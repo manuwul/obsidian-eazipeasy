@@ -8,3 +8,4 @@
 !esbuild.config.mjs
 !locales/
 !locales/*
+!versions.json
