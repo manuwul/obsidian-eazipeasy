@@ -1,0 +1,11 @@
+{
+	"id": "eazipeasy",
+	"name": "eaZIPeazy",
+	"version": "0.1.0",
+	"minAppVersion": "1.5.0",
+	"description": "Share your notes as zip - easy peasy export and import",
+	"author": "manuwul",
+	"authorUrl": "https://github.com/manuwul",
+	"isDesktopOnly": false,
+	"mobile": true
+}

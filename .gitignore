@@ -1,0 +1,8 @@
+*
+!.gitignore
+!README.md
+!manifest.json
+!package.json
+!main.ts
+!LICENSE
+!esbuild.config.mjs
