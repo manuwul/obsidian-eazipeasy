@@ -6,6 +6,5 @@
 	"description": "Share your notes as zip - easy peasy export and import",
 	"author": "manuwul",
 	"authorUrl": "https://github.com/manuwul",
-	"isDesktopOnly": false,
-	"mobile": true
+	"isDesktopOnly": false
 }
