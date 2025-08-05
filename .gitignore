@@ -6,3 +6,5 @@
 !main.ts
 !LICENSE
 !esbuild.config.mjs
+!locales/
+!locales/*

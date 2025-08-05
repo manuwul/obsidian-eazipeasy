@@ -1,6 +1,17 @@
 import { Plugin, Notice, TFile, MetadataCache, PluginSettingTab, App, Setting, Vault, normalizePath } from "obsidian";
 import JSZip from "jszip";
 
+import locales from "./locales"
+
+function getUserLang(): string {
+	const lang = window.localStorage.getItem("language");
+	return lang?.split("-")[0] || "en";
+}
+
+function t(key: string): string {
+	const lang = getUserLang();
+	return locales[lang]?.[key] || locales["en"]?.[key] || key;
+}
 
 
 interface eqZIPeasyPluginSettings {
@@ -29,11 +40,12 @@ class eaZIPeasySettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 
 		containerEl.empty();
-		containerEl.createEl("h2", {text: "Export settings"});
+		containerEl.createEl("h1", {text: t("settings.header")})
+		containerEl.createEl("h2", {text: t("settings.exportHeader")});
 		
 		new Setting(containerEl)
-			.setName('Max Depth')
-			.setDesc('Set max lookup depth (-1 = infinite)')
+			.setName(t("settings.maxDepth"))
+			.setDesc(t("settings.maxDepthDescr"))
 			.addSlider((slider) => 
 				slider
 					.setLimits(-1, 5, 1)
@@ -46,8 +58,8 @@ class eaZIPeasySettingTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
-			.setName('Export Folder')
-			.setDesc('Folder for exported ZIPs')
+			.setName(t("settings.exportFolder"))
+			.setDesc(t("settings.exportFolderDescr"))
 			.addText((text) =>
 				text
 					.setValue(this.plugin.settings.exportFolder)
@@ -58,11 +70,11 @@ class eaZIPeasySettingTab extends PluginSettingTab {
 			);
 		
 
-		containerEl.createEl("h2", {text: "Import settings"});
+		containerEl.createEl("h2", {text: t("settings.importHeader")});
 		
 		new Setting(containerEl)
-			.setName('Import Folder')
-			.setDesc('Folder for imported ZIPs')
+			.setName(t("settings.importFolder"))
+			.setDesc(t("settings.importFolderDescr"))
 			.addText((text) =>
 				text
 					.setValue(this.plugin.settings.importFolder)

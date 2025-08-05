@@ -1,0 +1,12 @@
+{
+    "settings.header": "eaZIPeasy Plugin Settings",
+    "settings.exportHeader": "Export settings",
+    "settings.maxDepth": "Maximum Link Depth",
+    "settings.maxDepthDescr": "Set max link depth (-1 = infinite)",
+    "settings.exportFolder": "Export Folder",
+    "settings.exportFolderDescr": "Vault folder where ZIPs will be saved",
+    "settings.importHeader": "Import settings",
+    "settings.importFolder": "Import Folder",
+    "settings.importFolderDescr": "Vault folder where ZIPs will be extracted"
+
+}

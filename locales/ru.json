@@ -1,0 +1,11 @@
+{
+    "settings.header": "Настройки плагина eaZIPeasy",
+    "settings.exportHeader": "Настройки экспорта",
+    "settings.maxDepth": "Максимальная глубина связей",
+    "settings.maxDepthDescr": "Максимальная глубина обхода всех ссылок (-1 = бесконечно)",
+    "settings.exportFolder": "Папка экспорта",
+    "settings.exportFolderDescr": "Папка хранилища, куда будут сохранены ZIP архивы",
+    "settings.importHeader": "Настройки импорта",
+    "settings.importFolder": "Папка импорта",
+    "settings.importFolderDescr": "Папка хранилища, куда будут извлечены ZIP архивы"
+}
