@@ -7,5 +7,7 @@
     "settings.exportFolderDescr": "Папка хранилища, куда будут сохранены ZIP архивы",
     "settings.importHeader": "Настройки импорта",
     "settings.importFolder": "Папка импорта",
-    "settings.importFolderDescr": "Папка хранилища, куда будут извлечены ZIP архивы"
+    "settings.importFolderDescr": "Папка хранилища, куда будут извлечены ZIP архивы",
+    "commands.export": "экспорт в ZIP",
+    "commands.import": "импорт из ZIP"
 }

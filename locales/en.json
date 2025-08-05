@@ -7,6 +7,7 @@
     "settings.exportFolderDescr": "Vault folder where ZIPs will be saved",
     "settings.importHeader": "Import settings",
     "settings.importFolder": "Import Folder",
-    "settings.importFolderDescr": "Vault folder where ZIPs will be extracted"
-
+    "settings.importFolderDescr": "Vault folder where ZIPs will be extracted",
+    "commands.export": "export as ZIP",
+    "commands.import": "import from ZIP"
 }

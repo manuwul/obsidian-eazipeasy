@@ -97,13 +97,13 @@ extends Plugin {
 
 		this.addCommand({
 			id: "export-as-zip",
-			name: "export as zip",
+			name: t("commands.export"),
 			callback: () => { this.HandleExport() }
 		});
 
 		this.addCommand({
 			id: "import-from-zip",
-			name: "import from zip",
+			name: t("commands.import"),
 			callback: () => { this.HandleImport() }
 		});
 	}
