@@ -1,4 +1,4 @@
-import { Plugin, Notice, TFile, MetadataCache, PluginSettingTab, App, Setting, Vault, normalizePath } from "obsidian";
+import { Plugin, Notice, TFile, MetadataCache, PluginSettingTab, App, Setting, Vault, normalizePath, FileSystemAdapter } from "obsidian";
 import JSZip from "jszip";
 
 import locales from "./locales"
@@ -146,7 +146,7 @@ extends Plugin {
 				await this.ensureFolderExists(fullPath, this.app.vault);
 
 				if (!relativePath.endsWith(".md")) { 
-					if (existingFIle instanceof TFile) { await vault.delete(existingFIle) }
+					if (existingFIle instanceof TFile) { await this.app.fileManager.trashFile(existingFIle) }
 					await vault.createBinary(fullPath, content) }
 				else {
 					const text = new TextDecoder("utf-8").decode(content);
@@ -236,7 +236,7 @@ extends Plugin {
 			const fullPath = normalizePath(`${exportFolder}/${filename}`);
 			
 			const existing = this.app.vault.getAbstractFileByPath(fullPath);
-			if (existing instanceof TFile) { await this.app.vault.delete(existing) }
+			if (existing instanceof TFile) { await this.app.fileManager.trashFile(existing) }
 
 			try {
 				await this.app.vault.createFolder(exportFolder);
@@ -246,7 +246,11 @@ extends Plugin {
 
 			new Notice(`ZIP created at ${fullPath}`);
 			
-			if (!this.isMobile()) { this.revealInFileExplorer((this.app.vault.adapter as any).getFullPath(fullPath)) }
+			if (!this.isMobile()) {
+				const adapter = this.app.vault.adapter;
+				if (adapter instanceof FileSystemAdapter) {	this.revealInFileExplorer(adapter.getFullPath(fullPath)) }
+				else {new Notice("Cannot reveal file in system explorer on this platform")}
+			}
    else { this.app.workspace.openLinkText(fullPath, "/", false); }
 		}
 	}
