@@ -1,0 +1,74 @@
+.modal {
+    position: fixed !important;
+    top: 10vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-height: 50hv;
+    overflow-y: auto;
+}
+
+.password-prompt {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.password-input {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid var(--text-normal);
+}
+
+.show-password-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 6px 8px;
+    user-select: none;
+}
+
+.modal-button-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn, .cancer-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  min-width: 40px;
+  white-space: nowrap;
+}
+
+.submit-btn {
+  background-color: var(--interactive-accent);
+  color: white;
+}
+
+.cancer-btn {
+  background-color: var(--interactive-danger);
+  color: white;
+}

@@ -5,9 +5,26 @@
     "settings.maxDepthDescr": "Set max link depth (-1 = infinite)",
     "settings.exportFolder": "Export Folder",
     "settings.exportFolderDescr": "Vault folder where ZIPs will be saved",
+    "settings.askPassword": "Ask Password",
+    "settings.askPasswordDescr": "Ask password when creating archive",
+    "settings.defaultPassword": "Default Password",
+    "settings.defaultPasswordDescr": "Default password for archives (empty = no password)",
     "settings.importHeader": "Import settings",
     "settings.importFolder": "Import Folder",
     "settings.importFolderDescr": "Vault folder where ZIPs will be extracted",
-    "commands.export": "export as ZIP",
-    "commands.import": "import from ZIP"
+
+
+    "commands.exportZip": "export as ZIP",
+    "commands.exportTar": "export as TAR",
+    "commands.exportTarGz": "export as TAR.GZ",
+    "commands.exportTarBz2": "export as TAR.BZ2",
+    "commands.import": "import from archive",
+
+    "password.enter": "Enter password for archive (empty = no password)",
+    "password.wrong": "Wrong password",
+
+    "archive.encrypted": "Archive is encrypted",
+
+    "current.none": "Open file first"
+
 }

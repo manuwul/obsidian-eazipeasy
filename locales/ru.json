@@ -5,9 +5,26 @@
     "settings.maxDepthDescr": "Максимальная глубина обхода всех ссылок (-1 = бесконечно)",
     "settings.exportFolder": "Папка экспорта",
     "settings.exportFolderDescr": "Папка хранилища, куда будут сохранены ZIP архивы",
+    "settings.askPassword": "Спрашивать пароль",
+    "settings.askPasswordDescr": "Спрашивать пароль при создании архива",
+    "settings.defaultPassword": "Стандартный пароль",
+    "settings.defaultPasswordDescr": "Стандартный пароль для архивов (пусто = нет пароля)",
     "settings.importHeader": "Настройки импорта",
     "settings.importFolder": "Папка импорта",
     "settings.importFolderDescr": "Папка хранилища, куда будут извлечены ZIP архивы",
-    "commands.export": "экспорт в ZIP",
-    "commands.import": "импорт из ZIP"
+
+
+    "commands.exportZip": "экспорт в ZIP",
+    "commands.exportTar": "экспорт в TAR",
+    "commands.exportTarGz": "экспорт в TAR.GZ",
+    "commands.exportTarBz2": "экспорт в TAR.BZ2",
+    "commands.import": "импорт из архива",
+
+    "password.enter": "Введите пароль для архива (пусто = нет пароля)",
+    "password.wrong": "Неверный пароль",
+
+    "archive.encrypted": "Архив зашифрован",
+
+    "current.none": "Сначала откройте файл"
+    
 }
